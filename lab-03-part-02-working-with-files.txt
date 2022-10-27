@@ -35,7 +35,7 @@ Follow the instructions line-by-line.
 $ touch foo.txt
 $ ls
 Copy and paste the output below.
-----------
+foo.txt
 
 
 
@@ -51,7 +51,8 @@ $ touch bar.txt
 8. List the files in this directory using the flag that gives the most details.
 
 Copy and paste the output below.
-----------
+-rw-r--r--  1 peichen  staff  0 Oct 26 19:02 bar.txt
+-rw-r--r--  1 peichen  staff  0 Oct 26 19:02 foo.txt
 
 
 
@@ -60,21 +61,24 @@ Copy and paste the output below.
 
 
 Write the command that you used to copy the file.  Additionally, copy and paste the output of your file listing below.
-----------
-
+cp -r bar.txt baz.txt
+-rw-r--r--  1 peichen  staff  0 Oct 26 19:04 baz.txt
+-rw-r--r--  1 peichen  staff  0 Oct 26 19:02 bar.txt
+-rw-r--r--  1 peichen  staff  0 Oct 26 19:02 foo.txt
 
 
 ==========
 10. Delete the file called bar.txt and then list the files again.
 
 Write the command that you used to remove the file.  Copy and paste the output of your file listing below.
-----------
-==========
+rm -r bar.txt
+baz.txt	foo.txt
+
 11. Move the file called foo.txt to qux.txt and then list the files again.
 
 
 Write the command that you used to move the file.  Copy and paste the output of your file listing below.
-----------
+mv foo.txt qux.txt
 
 
 
@@ -89,7 +93,7 @@ Write the command that you used to move the file.  Copy and paste the output of 
 13. Try removing the directory called my_files using rmdir.
 
 Write out the command that you used and what happened.
-----------
+rmdir: my_files: Directory not empty
 
 
 
@@ -97,7 +101,8 @@ Write out the command that you used and what happened.
 14. Try removing the directory called my_files using rm.
 
 Write out the command that you used and what happened.
-----------
+rm my_files
+rm: my_files: is a directory
 
 
 
@@ -119,7 +124,7 @@ books/other/pg1232.txt
 Use the command called cat on the file to show its contents. 
 
 Describe what happened below.
-----------
+It displays writing of the book 
 
 
 
@@ -131,7 +136,8 @@ books/other/pg1232.txt
 Use the command, head, on the file to show the contents of the beginning of the file.  
 
 Write the command that you used below.  Write the last line of the output below (it should be the title).
-----------
+head pg1232.txt
+Title: The Prince
 
 
 
@@ -143,7 +149,16 @@ books/other/pg1232.txt
 Use tail on the file to show the contents of the end of the file.  
 
 Write the command that you used below.  Write the last line of the output below (it should be the title).
-----------
+ 
+ tail pg1232.txt
+ Most people start at our Web site which has the main PG search facility:
+
+     http://www.gutenberg.org
+
+This Web site includes information about Project Gutenberg-tm,
+including how to make donations to the Project Gutenberg Literary
+Archive Foundation, how to help produce our new eBooks, and how to
+subscribe to our email newsletter to hear about new eBooks.
 
 
 
@@ -155,7 +170,12 @@ books/other/pg1232.txt
 Use less and more on the file to show the contents of the file.  Try pressing spacebar and/or q afterwards.
 
 Write the command that you used below.  Describe what spacebar and q does after using either less or more.
-----------
+
+less pg1232.txt
+
+Space goes a page down 
+
+q exits the text
 
 
 
@@ -163,16 +183,24 @@ Write the command that you used below.  Describe what spacebar and q does after 
 20. Describe what situations you would use the following commands for viewing files: less, more, cat, tail, head
 
 (Some characteristics that may help your description might be the length of the file, whether or not you'd like to read the whole thing... or just the beginning or end, etc.)
-----------
+
+less: when I want navigate to a specific point in a file 
+more: to view more details of a file
+cat: to view more details of file
+tail:to view the end of a file
+head: to view the title of a file
 
 
 
 ==========
 21.  How many words are in pg1232.txt?  What command did you use to determine the word count?
-----------
+52639
+wc -w pg1232.txt
 
 
 
 ==========
 22.  How many lines are in pg1232.txt?  What command did you use to determine the line count?
-----------
+   5063 pg1232.txt
+   
+   wc -l pg132.txt
